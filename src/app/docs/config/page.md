@@ -1,4 +1,14 @@
-# 配置
+---
+title: 配置
+nextjs:
+  metadata:
+      title: 配置
+      description: Matrix OneBot 示例配置文件.
+---
+
+未来程序更完善后会有详细配置教程
+
+---
 
 ```toml
 full_user_id = "@username:example.org" # 帐号

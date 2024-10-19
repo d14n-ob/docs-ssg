@@ -1,8 +1,16 @@
-# OneBot 12 实现情况
+---
+title: OneBot 12 实现情况
+nextjs:
+  metadata:
+      title: OneBot 12 实现情况
+      description: OneBot 12 实现情况.
+---
 
 参见 [OneBot 12 接口定义](https://12.onebot.dev/interface/)。
 
 以下为本项目目前实现的事件和动作。
+
+---
 
 ## 事件（Events）
 
