@@ -24,10 +24,10 @@ const lexend = localFont({
 export const metadata: Metadata = {
   title: {
     template: '%s - Docs',
-    default: 'CacheAdvance - Never miss the cache again.',
+    default: 'Matrix-OneBot - 让 QQ 机器人在 Matrix 上再次伟大',
   },
   description:
-    'Cache every single thing your app could ever do ahead of time, so your code never even has to run at all.',
+    '为 Matrix 通讯实现 OneBot 标准, 使 OneBot 机器人/应用能运行在 Matrix 上',
 }
 
 export default function RootLayout({
