@@ -24,10 +24,10 @@ const lexend = localFont({
 export const metadata: Metadata = {
   title: {
     template: '%s - Docs',
-    default: 'Matrix-OneBot - 让 QQ 机器人在 Matrix 上再次伟大',
+    default: 'matrix-onebot - d14n-ob',
   },
   description:
-    '为 Matrix 通讯实现 OneBot 标准, 使 OneBot 机器人/应用能运行在 Matrix 上',
+    'Matrix 平台的 OneBot 实现，使 OneBot 应用可以对接到 Matrix。',
 }
 
 export default function RootLayout({
