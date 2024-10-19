@@ -8,18 +8,18 @@ import { HeroBackground } from '@/components/HeroBackground'
 import blurCyanImage from '@/images/blur-cyan.png'
 import blurIndigoImage from '@/images/blur-indigo.png'
 
-const codeLanguage = 'javascript'
-const code = `export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}`
+const codeLanguage = 'toml'
+const code = `full_user_id = "@bot:matrix.meowl.cc"
+lang_file = "zh-cn.toml"
+
+[[onebot_conn.http]]
+host = "127.0.0.1"
+port = 5700
+`
 
 const tabs = [
-  { name: 'cache-advance.config.js', isActive: true },
-  { name: 'package.json', isActive: false },
+  { name: 'config.toml', isActive: true },
+  { name: 'lang/zh-cn.toml', isActive: false },
 ]
 
 function TrafficLightsIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -56,11 +56,11 @@ export function Hero() {
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="/docs/getting-started">开始使用</Button>
-                <Button href="https://codeberg.org/d14n-ob/matrix-onebot" variant="secondary">源代码</Button>
+                <Button href="https://github.com/d14n-ob/matrix-onebot" variant="secondary">仓库</Button>
               </div>
             </div>
           </div>
-          {/* <div className="relative lg:static xl:pl-10">
+          <div className="relative lg:static xl:pl-10">
             <div className="absolute inset-x-[-50vw] -bottom-48 -top-32 [mask-image:linear-gradient(transparent,white,white)] lg:-bottom-32 lg:-top-32 lg:left-[calc(50%+14rem)] lg:right-0 lg:[mask-image:none] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:dark:[mask-image:linear-gradient(white,white,transparent)]">
               <HeroBackground className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]" />
             </div>
@@ -164,7 +164,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

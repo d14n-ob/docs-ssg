@@ -20,6 +20,27 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function CodeBergIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 4.233 4.233" {...props}>
+      <defs>
+        <linearGradient id="A" x1="42519.285" y1="-7078.789" x2="42575.336" y2="-6966.931"
+                        gradientUnits="userSpaceOnUse">
+          <stop offset="0" className="codeberg-stop-color" stop-opacity="0" />
+          <stop offset=".495" className="codeberg-stop-color" stop-opacity=".3" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M42519.285-7078.789c-.225.002-.437.078-.58.208s-.2.3-.158.465l33.586 125.889a87.18 87.18 0 0 0 39.381-33.764l-71.565-92.52c-.138-.175-.392-.282-.664-.279z"
+        transform="matrix(.024279 0 0 .024279 -1030.151335 172.969984)" fill="url(#A)"
+        paint-order="stroke markers fill" />
+      <path
+        d="M2.113.12C.944.12-.004 1.067-.004 2.236c0 .398.112.787.323 1.124l1.765-2.282c.013-.016.045-.016.057 0l1.765 2.282c.211-.337.323-.727.323-1.124C4.23 1.067 3.282.12 2.113.12z"
+        className="codeberg-fill" paint-order="markers fill stroke" />
+    </svg>
+  )
+}
+
 function Header() {
   let [isScrolled, setIsScrolled] = useState(false)
 
@@ -27,6 +48,7 @@ function Header() {
     function onScroll() {
       setIsScrolled(window.scrollY > 0)
     }
+
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => {
@@ -40,7 +62,7 @@ function Header() {
         'sticky top-0 z-50 flex flex-none flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-slate-900/5 transition duration-500 sm:px-6 lg:px-8 dark:shadow-none',
         isScrolled
           ? 'dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75'
-          : 'dark:bg-transparent',
+          : 'dark:bg-transparent'
       )}
     >
       <div className="mr-6 flex lg:hidden">
@@ -48,9 +70,9 @@ function Header() {
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
         <Link href="/" aria-label="Home page">
-          d14n-ob/matrix-onebot
-          {/* <Logomark className="h-9 w-9 lg:hidden" />
-          <Logo className="hidden h-9 w-auto fill-slate-700 lg:block dark:fill-sky-100" /> */}
+          <span className="hidden h-9 w-auto fill-slate-700 lg:block dark:fill-sky-100">d14n-ob/matrix-onebot</span>
+          <Logomark className="h-9 w-9 lg:hidden" />
+          {/*<Logo className="hidden h-9 w-auto fill-slate-700 lg:block dark:fill-sky-100" />*/}
         </Link>
       </div>
       <div className="-my-5 mr-6 sm:mr-8 md:mr-0">
@@ -58,9 +80,20 @@ function Header() {
       </div>
       <div className="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
         <ThemeSelector className="relative z-10" />
-        {/* <Link href="https://github.com" className="group" aria-label="GitHub">
+        <Link
+          href="https://github.com/d14n-ob/matrix-onebot"
+          className="group"
+          aria-label="GitHub"
+        >
           <GitHubIcon className="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
-        </Link> */}
+        </Link>
+        <Link
+          href="https://codeberg.org/d14n-ob/matrix-onebot"
+          className="group"
+          aria-label="GitHub"
+        >
+          <CodeBergIcon className="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
+        </Link>
       </div>
     </header>
   )
@@ -70,18 +103,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   let pathname = usePathname()
   let isHomePage = pathname === '/'
 
-  if (isHomePage) {
-    return (
-      <div className="flex w-full flex-col">
-        <Header />
-
-        <Hero />
-      </div>
-    )
-  }
   return (
     <div className="flex w-full flex-col">
       <Header />
+
+      {isHomePage && <Hero />}
 
       <div className="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
         <div className="hidden lg:relative lg:block lg:flex-none">
