@@ -1,8 +1,12 @@
+import { nextui } from '@nextui-org/theme'
 import typographyPlugin from '@tailwindcss/typography'
 import { type Config } from 'tailwindcss'
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx,md}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx,md}',
+    './node_modules/@nextui-org/theme/dist/components/(avatar|button|divider|link|spacer|ripple|spinner).js',
+  ],
   darkMode: 'selector',
   theme: {
     fontSize: {
@@ -30,5 +34,5 @@ export default {
       },
     },
   },
-  plugins: [typographyPlugin],
+  plugins: [typographyPlugin, nextui()],
 } satisfies Config

@@ -23,7 +23,7 @@ const lexend = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Docs',
+    template: '%s - 文档',
     default: 'matrix-onebot - d14n-ob',
   },
   description:

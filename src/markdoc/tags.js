@@ -1,5 +1,6 @@
 import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import { TeamSection } from '@/components/TeamSection'
 
 const tags = {
   callout: {
@@ -41,6 +42,10 @@ const tags = {
       icon: { type: String },
       href: { type: String },
     },
+  },
+  'team-section': {
+    selfClosing: true,
+    render: TeamSection,
   },
 }
 
