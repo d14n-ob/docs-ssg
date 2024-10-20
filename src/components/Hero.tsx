@@ -55,7 +55,7 @@ export function Hero() {
                 Matrix 平台的 OneBot 实现，使 OneBot 应用可以对接到 Matrix。
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                <Button href="/docs/getting-started">开始使用</Button>
+                <Button href="/docs/config">开始使用</Button>
                 <Button href="https://github.com/d14n-ob/matrix-onebot" variant="secondary">仓库</Button>
               </div>
             </div>
