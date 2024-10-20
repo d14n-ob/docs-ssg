@@ -10,7 +10,7 @@ export const navigation = [
   {
     title: '关于',
     links: [
-      { title: "社区&贡献者", href: '/docs/about' },
+      { title: "社区 & 贡献者", href: '/docs/about' },
     ]
   }
 ]

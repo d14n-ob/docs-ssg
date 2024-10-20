@@ -21,9 +21,9 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Peaksol",
-    avatar: "https://avatars.githubusercontent.com/u/34597453?s=64&v=4",
+    avatar: "https://codeberg.org/avatars/b3abc2ae23d9d6ea4476183770472133a73347457e0524e219575de28331c280?size=64",
     role: "DOC",
-    bio: "文档编写/标准设计/图标设计",
+    bio: "文档编写/标准设计",
     social: {
       github: "@jane-doe",
     },
@@ -70,8 +70,7 @@ export function TeamSection() {
           <Button color="secondary" onClick={() => router.push("https://matrix.to/#/#onebot:matrix.meowl.cc")}> Join us</Button>
         </div>
         <Spacer y={8} />
-        <h1 className="text-4xl font-medium tracking-tight">Meet our team.</h1>
-        <Spacer y={4} />
+        <h1 className="text-4xl font-medium tracking-tight">贡献者</h1>
         {/*<h2 className="text-large text-default-500">*/}
         {/*  Our philosophy is to build a great team and then empower them to do*/}
         {/*  great things.*/}
