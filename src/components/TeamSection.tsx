@@ -2,11 +2,12 @@
 import React from "react";
 import { Avatar } from '@nextui-org/avatar'
 // import { Link } from '@nextui-org/link'
-import { Button } from '@nextui-org/button'
-import { Divider } from '@nextui-org/divider'
+// import { Button } from '@nextui-org/button'
+// import { Divider } from '@nextui-org/divider'
 import { Spacer } from '@nextui-org/spacer'
 import { cn } from '@nextui-org/theme'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 // import { Icon } from '@iconify/react'
 
 const teamMembers: TeamMember[] = [
@@ -64,11 +65,7 @@ export function TeamSection() {
       <div className="flex max-w-xl flex-col text-center">
         {/*<h2 className="font-medium text-secondary">We&apos;re hiring!</h2>*/}
         <h2 className="text-secondary">社区服务器</h2>
-        <div className="flex h-10 items-center justify-center gap-2">
-          <span className="text-2xl">#onebot:matrix.meowl.cc</span>
-          <Divider orientation="vertical" />
-          <Button color="secondary" onClick={() => router.push("https://matrix.to/#/#onebot:matrix.meowl.cc")}> Join us</Button>
-        </div>
+        <Link href="https://matrix.to/#/#onebot:matrix.meowl.cc">#onebot:matrix.meowl.cc</Link>
         <Spacer y={8} />
         <h1 className="text-4xl font-medium tracking-tight">贡献者</h1>
         {/*<h2 className="text-large text-default-500">*/}
