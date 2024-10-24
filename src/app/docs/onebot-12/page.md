@@ -27,8 +27,8 @@ nextjs:
 
 ### 通知事件
 
-- ❌ `notice.friend_increase` 好友增加
-- ❌ `notice.friend_decrease` 好友减少
+- ✅ `notice.friend_increase` 好友增加
+- ✅ `notice.friend_decrease` 好友减少
 - ❌ `notice.private_message_delete` 私聊消息删除
 - ✅ `notice.group_member_increase` 群成员增加
 - ✅ `notice.group_member_decrease` 群成员减少
