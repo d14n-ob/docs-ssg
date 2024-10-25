@@ -70,9 +70,8 @@ function Header() {
       </div>
       <div className="relative flex flex-grow basis-0 items-center">
         <Link href="/" aria-label="Home page">
-          <span className="hidden h-9 w-auto fill-slate-700 lg:block dark:fill-sky-100">d14n-ob/matrix-onebot</span>
           <Logomark className="h-9 w-9 lg:hidden" />
-          {/*<Logo className="hidden h-9 w-auto fill-slate-700 lg:block dark:fill-sky-100" />*/}
+          <Logo className="hidden h-9 w-auto fill-slate-700 lg:block dark:fill-sky-100" />
         </Link>
       </div>
       <div className="-my-5 mr-6 sm:mr-8 md:mr-0">
