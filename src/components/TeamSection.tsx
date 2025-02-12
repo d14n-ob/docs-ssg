@@ -22,7 +22,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Peaksol",
-    avatar: "https://codeberg.org/avatars/b3abc2ae23d9d6ea4476183770472133a73347457e0524e219575de28331c280?size=64",
+    avatar: "https://avatars.githubusercontent.com/u/34597453?s=96&v=4",
     role: "DOC",
     bio: "文档编写/标准设计",
     social: {
@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Mind Dance",
-    avatar: "https://avatars.githubusercontent.com/u/42174702?s=64&v=4",
+    avatar: "https://avatars.githubusercontent.com/u/42174702?s=96&v=4",
     role: "MOD",
     bio: "社区服务器管理",
     social: {
@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Shinda",
-    avatar: "https://avatars.githubusercontent.com/u/157275997?s=64&v=4",
+    avatar: "https://avatars.githubusercontent.com/u/157275997?s=96&v=4",
     role: "SYS/DEV",
     bio: "早期赞助/开发者",
     social: {
