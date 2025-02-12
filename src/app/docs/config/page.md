@@ -6,10 +6,6 @@ nextjs:
       description: Matrix OneBot 示例配置文件.
 ---
 
-未来程序更完善后会有详细配置教程
-
----
-
 ```toml
 full_user_id = "@username:example.org" # 帐号
 password = 'your_password' # 密码
@@ -17,10 +13,13 @@ server_domain = "" # 服务器地址，留空将使用 full_user_id 的地址
 lang_file = "zh-cn.toml"
 
 [onebot]
-query_self_event_interval_secs = 1
+query_self_event_interval_secs = 1 # OneBot Actions Handler 查询自身信息间隔
+is_intercept_self_message = true # 是否拦截自己发送的消息
+is_message_forward_struct = true # message 是否返回数据结构, 否则返回字符串
+is_alt_message_forward_struct = false # alt_message 是否返回数据结构, 否则返回字符串
 
 [meta]
-log_level = "info" # 日志级别，可选：trace, debug, info, warn, error
+log_level = "info" # 日志级别，可选: trace, debug, info, warn, error
 log_path = "" # 日至文件保存路径
 
 [onebot_conn]
